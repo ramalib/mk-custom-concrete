@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mk-black:        #09080A;
+  --mk-surface:      #131116;
+  --mk-card:         #1C1820;
+  --mk-border:       #272330;
+  --mk-amber:        #C8892A;
+  --mk-amber-light:  #DFA94C;
+  --mk-stone:        #7A6E5F;
+  --mk-cream:        #F0EBE3;
+  --mk-muted:        #8C8278;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--mk-black);
+  color: var(--mk-cream);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Concrete texture via diagonal striations */
+.concrete-texture {
+  background-image:
+    repeating-linear-gradient(
+      73deg,
+      transparent 0px, transparent 2px,
+      rgba(255,255,255,0.013) 2px, rgba(255,255,255,0.013) 3px
+    ),
+    repeating-linear-gradient(
+      -17deg,
+      transparent 0px, transparent 5px,
+      rgba(255,255,255,0.007) 5px, rgba(255,255,255,0.007) 6px
+    );
+}
+
+/* Clamp-based display headings */
+.text-display-xl {
+  font-size: clamp(2.8rem, 7vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+.text-display-lg {
+  font-size: clamp(2.2rem, 4.5vw, 4.5rem);
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+}
+.text-display-md {
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Amber glow card */
+.card-amber-hover {
+  transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+.card-amber-hover:hover {
+  box-shadow: 0 0 32px rgba(200,137,42,0.12), 0 8px 24px rgba(0,0,0,0.4);
+  transform: translateY(-3px);
+  border-color: rgba(200,137,42,0.35) !important;
+}
+
+/* Section label */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--mk-amber);
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--mk-amber);
+  opacity: 0.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--mk-black); }
+::-webkit-scrollbar-thumb { background: var(--mk-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--mk-amber-dark); }
