@@ -34,19 +34,32 @@ export default function Footer() {
             <p className="font-body text-sm text-mk-muted mb-6" style={{ lineHeight: '1.75', maxWidth: '26ch' }}>
               Building extraordinary outdoor living spaces throughout Colorado Springs and beyond.
             </p>
-            <a
-              href="https://instagram.com/mk_concrete_sculpter"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="inline-flex items-center justify-center w-9 h-9 border border-mk-border hover:border-mk-amber/50 text-mk-muted hover:text-mk-amber transition-all duration-200"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="1.5"/>
-                <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="1.5"/>
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-              </svg>
-            </a>
+            <div className="flex items-center gap-2">
+              <a
+                href="https://instagram.com/mk_concrete_sculpter"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="inline-flex items-center justify-center w-9 h-9 border border-mk-border hover:border-mk-amber/50 text-mk-muted hover:text-mk-amber transition-all duration-200"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="1.5"/>
+                  <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="1.5"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+              </a>
+              <a
+                href="https://facebook.com/profile.php?id=100063481147661"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="inline-flex items-center justify-center w-9 h-9 border border-mk-border hover:border-mk-amber/50 text-mk-muted hover:text-mk-amber transition-all duration-200"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Nav col */}
