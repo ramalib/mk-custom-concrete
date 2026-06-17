@@ -6,8 +6,8 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 export default function Hero() {
   const ref       = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
-  const opContent = useTransform(scrollYProgress, [0.3, 0.75], [1, 0])
-  const yContent  = useTransform(scrollYProgress, [0.1, 1], ['0%', '18%'])
+  const opContent = useTransform(scrollYProgress, [0.5, 0.88], [1, 0])
+  const yContent  = useTransform(scrollYProgress, [0.2, 1], ['0%', '18%'])
 
   return (
     <section ref={ref} className="relative min-h-screen flex flex-col overflow-hidden">
