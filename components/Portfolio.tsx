@@ -11,25 +11,25 @@ const projects = [
     src: BASE + '65e605b8471cd513e06c2a1c.jpeg',
     label: 'Custom Pool',
     col: 'col-span-2',
-    height: 480,
+    h: 'h-52 sm:h-[480px]',
   },
   {
     src: BASE + '6886dc14c1049767bb015d22.jpeg',
     label: 'Resort Build',
     col: 'col-span-1',
-    height: 480,
+    h: 'h-52 sm:h-[480px]',
   },
   {
     src: BASE + '65e5d57b2e5ddb2a0a99b625.jpeg',
     label: 'Water Feature',
     col: 'col-span-1',
-    height: 360,
+    h: 'h-44 sm:h-[360px]',
   },
   {
     src: BASE + '47054e99-bd50-4154-98e4-a75cba649ebe.jpeg',
     label: 'Outdoor Living',
     col: 'col-span-2',
-    height: 360,
+    h: 'h-44 sm:h-[360px]',
   },
 ]
 
@@ -89,13 +89,12 @@ export default function Portfolio() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="grid grid-cols-3 gap-2"
+          className="grid grid-cols-2 sm:grid-cols-3 gap-2"
         >
           {projects.map((p, i) => (
             <div
               key={i}
-              className={`group relative overflow-hidden ${p.col}`}
-              style={{ height: p.height }}
+              className={`group relative overflow-hidden ${p.col} ${p.h}`}
             >
               <Image
                 src={p.src}

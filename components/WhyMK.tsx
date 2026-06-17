@@ -91,7 +91,7 @@ export default function WhyMK() {
             >
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-3 bg-mk-amber hover:bg-mk-amber-light text-mk-black font-body font-semibold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(200,137,42,0.35)]"
+                className="group flex sm:inline-flex items-center justify-center gap-3 bg-mk-amber hover:bg-mk-amber-light text-mk-black font-body font-semibold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(200,137,42,0.35)]"
               >
                 Get Free Design Consultation
                 <svg

@@ -6,8 +6,8 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 export default function Hero() {
   const ref       = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
-  const opContent = useTransform(scrollYProgress, [0, 0.6], [1, 0])
-  const yContent  = useTransform(scrollYProgress, [0, 1], ['0%', '18%'])
+  const opContent = useTransform(scrollYProgress, [0.3, 0.75], [1, 0])
+  const yContent  = useTransform(scrollYProgress, [0.1, 1], ['0%', '18%'])
 
   return (
     <section ref={ref} className="relative min-h-screen flex flex-col overflow-hidden">
@@ -47,7 +47,7 @@ export default function Hero() {
       {/* ── Main content — centered ── */}
       <motion.div
         style={{ opacity: opContent, y: yContent }}
-        className="relative z-10 flex flex-col items-center justify-center flex-1 min-h-screen text-center max-w-5xl mx-auto w-full px-6 lg:px-10 py-32"
+        className="relative z-10 flex flex-col items-center justify-start md:justify-center flex-1 min-h-screen text-center max-w-5xl mx-auto w-full px-6 lg:px-10 pt-36 pb-40 md:py-32"
       >
         {/* Location badge */}
         <motion.div

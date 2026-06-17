@@ -205,8 +205,7 @@ export default function Process() {
                 />
 
                 <div
-                  className="relative z-10 px-8 lg:px-7 transition-transform duration-500 ease-out group-hover:-translate-y-1"
-                  style={{ paddingTop: '3.5rem', paddingBottom: '2.5rem' }}
+                  className="relative z-10 px-8 lg:px-7 pt-6 pb-8 lg:pt-14 lg:pb-10 transition-transform duration-500 ease-out group-hover:-translate-y-1"
                 >
                   {/* Watermark number */}
                   <div
